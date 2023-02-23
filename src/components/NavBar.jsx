@@ -1,19 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLinks } from "./links";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [openDropdownId, setOpenDropdownId] = useState(null);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowCH(true);
-    }, 3000);
-    return () => clearTimeout(timeout);
-  }, []);
 
   var Scroll = require("react-scroll");
   const navigate = useNavigate();
