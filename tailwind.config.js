@@ -10,12 +10,12 @@ module.exports = {
       69: "69px",
     },
     screens: {
-      xs: "450px",
+      xs: "300px",
       sm: "600px",
-      smd: "800px",
-      md: "1000px",
+      smd: "900px",
+      md: "1200px",
       lg: "1500px",
-      xl: "2000px",
+      xl: "1800px",
     },
     extend: {
       fontFamily: {

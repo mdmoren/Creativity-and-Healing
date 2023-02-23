@@ -10,9 +10,9 @@ export const NavLinks = [
         url: "/gendered-violence",
         title: "Gendered Violence",
         sublinks: [
-            "What It Is",
-            "Where It Comes From",
-            "Who It Affects"
+            {title:"What It Is", link:""},
+            {title:"Where It Comes From", link:""},
+            {title:"Who It Affects", link:""}
         ],
     },
     {
@@ -20,9 +20,9 @@ export const NavLinks = [
         url: "/healing",
         title: "Healing",
         sublinks: [
-            "Transformative Justice",
-            "Creativity",
-            "Community"
+            {title:"Transformative Justice", link:""},
+            {title:"Creativity", link:""},
+            {title:"Community", link:""}
         ],
     },
     {
@@ -36,10 +36,10 @@ export const NavLinks = [
         url: "/literature",
         title: "Literature",
         sublinks: [
-            "Fiction",
-            "Nonfiction",
-            "Poetry",
-            "Music"
+            {title:"Fiction", link:""},
+            {title:"Nonfiction", link:""},
+            {title:"Poetry", link:""},
+            {title:"Music", link:""}
         ],
     },
     {
@@ -47,8 +47,8 @@ export const NavLinks = [
         url: "/academic-resources",
         title: "Academic Resources",
         sublinks: [
-            "Research",
-            "Pedagogy"
+            {title:"Research", link:""},
+            {title:"Pedagogy", link:""}
         ],
     },
     {
@@ -56,10 +56,10 @@ export const NavLinks = [
         url: "/des-moines-organizations",
         title: "Organizations",
         sublinks: [
-            "Monsoon Asians and Pacific Islanders in Solidarity",
-            "Iowa Coalition Against Domestic Violence",
-            "LUNA  (Latinas Unidas Por Un Nuevo Amanecer)",
-            "Iowa Coalition Against Sexual Assault"
+            {title:"Monsoon Asians and Pacific Islanders in Solidarity", link:""},
+            {title:"Iowa Coalition Against Domestic Violence", link:""},
+            {title:"LUNA  (Latinas Unidas Por Un Nuevo Amanecer)", link:""},
+            {title:"Iowa Coalition Against Sexual Assault", link:""}
         ],
     },
     {

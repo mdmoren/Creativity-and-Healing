@@ -7,83 +7,60 @@ import { NavLinks } from "./links";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
-  const baseStyleX = `ml-10 text-md smd:text-xl cursor-pointer capitalize font-medium font-public-sans
-  duration-200 link-underline
- text-gray-500 hover:text-black`;
-  const baseStyleY = `my-5 text-xl cursor-pointer capitalize font-medium font-public-sans
-  duration-200 link-underline
- text-gray-500 hover:text-black`;
-
   return (
-    <div
-      className="
-      flex justify-between items-center 
-      w-full h-10 md:h-20  fixed z-10
-      transition-all duration-200"
-    >
-      <div
-        className="
-          flex flex-1 pl-[40px]
-          justify-center sm:justify-start
-          pt-3
-          transition-all duration-500"
-      >
-        <h1
-          className="
-              text-xl md:text-3xl font-labelle
-              cursor-pointer text-black
-              transition-all duration-500"
-        >
-          Creativity and Violence
-        </h1>
-      </div>
+    <div className="flex w-screen h-14 bg-zinc-600">
 
-      <ul className="mr-10 hidden sm:flex">
+      <ul className="h-full w-full justify-center items-center hidden smd:flex">
         {NavLinks.map(({ id, url, title, sublinks }) => (
-          <li key={id} className={baseStyleX}>
-            <li>
+          <li key={id} className=" group text-sm mx-4 font-semibold text-[#bbb] hover:text-[#fff] font-sans link-underline">
               <Link to={url}>{title}</Link>
-            </li>
+
+              { sublinks.length > 0 &&
+                  <ul className="hidden group-hover:flex flex-col absolute top-14 m-2">
+                    {sublinks.map(({title,link}) => (
+                      <li>
+                        <Link onClick={() => setNav(!nav)} to={url} 
+                            className='text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans'>
+                            {title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                }  
           </li>
         ))}
       </ul>
 
-      <div
-        onClick={() => setNav(!nav)}
-        className="
-           cursor-pointer mr-5
-          hover:scale-110 duration-200  
-          text-[#999] sm:hidden"
-      >
-        {nav ? (
-          <FaTimes className="hover:text-[#e74c3c]" size={25} />
-        ) : (
-          <FaBars className="hover:text-[#eee]" size={25} />
-        )}
+      <div onClick={() => setNav(!nav)}
+        className="flex w-full items-center justify-end smd:hidden ">
+        {nav ? ( <FaTimes className="m-5 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#e74c3c]" size={20} />) : 
+        (<FaBars className="m-5 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#fff]" size={20} />)}
       </div>
 
-      <ul
-        className={`${
-          nav
-            ? "backdrop-blur-lg w-full"
-            : "hidden opacity-0 backdrop-blur-none w-0"
-        } h-screen absolute top-10 md:top-20 sm:hidden transition-all duration-300`}
-      >
-        <div
-          className="
-              flex flex-col m-5 p-10
-              justify-center items-start
-              bg-[#000000dc] shadow-md shadow-[#000] "
-        >
+      <div className={`${nav ? "w-full" : "hidden w-0"}  flex absolute top-14 smd:hidden transition-all duration-300 bg-zinc-600`}>
+        <ul className=" flex flex-col justify-center items-start w-full p-5">
           {NavLinks.map(({ id, url, title, sublinks }) => (
-            <li key={id} className={baseStyleY}>
-              <li>
-                <Link to={url}>{title}</Link>
-              </li>
+            <li key={id} className="w-full py-2 group">
+                <Link onClick={() => setNav(!nav)} to={url} className='text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans'>{title}</Link>
+                
+                { sublinks.length > 0 &&
+                  <ul className="hidden group-hover:flex flex-col m-2">
+                    {sublinks.map(({title,link}) => (
+                      <li>
+                        <Link onClick={() => setNav(!nav)} to={url} 
+                            className='text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans'>
+                            {title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                }  
+
             </li>
           ))}
-        </div>
-      </ul>
+        </ul>
+      </div>
+
     </div>
   );
 };

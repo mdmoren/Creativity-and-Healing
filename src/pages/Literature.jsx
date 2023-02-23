@@ -2,7 +2,7 @@ import React from 'react'
 
 const Literature = () => {
   return (
-    <div className='flex h-screen w-screen justify-center items-center'>Literature</div>
+    <div className='flex w-screen justify-center items-center'>Literature</div>
   )
 }
 

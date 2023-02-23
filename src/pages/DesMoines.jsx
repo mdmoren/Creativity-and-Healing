@@ -2,7 +2,7 @@ import React from 'react'
 
 const DesMoines = () => {
   return (
-    <div className='flex h-screen w-screen justify-center items-center'>Des Moines Organizations</div>
+    <div className='flex  w-screen justify-center items-center'>Des Moines Organizations</div>
   )
 }
 

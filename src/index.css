@@ -10,7 +10,7 @@
         list-style: none;
         display: inline-block;
         padding-bottom:1px;
-        background: linear-gradient(#000, #000) center bottom;
+        background: linear-gradient(#fff, #fff) center bottom;
         background-size: 0% 0px;
         background-repeat:no-repeat;
         transition: all 0.3s;
@@ -58,7 +58,7 @@
       }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 15px;
   }
 
@@ -73,4 +73,4 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to top, #000, #aaa, #000);;
-  }
+  } */
