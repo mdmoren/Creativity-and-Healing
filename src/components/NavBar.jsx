@@ -112,7 +112,7 @@ const NavBar = () => {
                           setNav(!nav);
                           handleSubLink(url, link);
                         }}
-                        className="text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans"
+                        className="my-2 text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans"
                       >
                         {title}
                       </div>
