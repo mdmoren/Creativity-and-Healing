@@ -72,7 +72,7 @@ const NavBar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="flex items-center justify-end w-full smd:hidden "
+        className="flex items-center justify-start w-full smd:hidden "
       >
         {nav ? (
           <FaTimes
