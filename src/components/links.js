@@ -48,7 +48,7 @@ export const NavLinks = [
     title: "Academic Resources",
     sublinks: [
       { title: "Research", link: "ar1" },
-      { title: "Pedagogy", link: "ar1" },
+      { title: "Pedagogy", link: "ar2" },
     ],
   },
   {
