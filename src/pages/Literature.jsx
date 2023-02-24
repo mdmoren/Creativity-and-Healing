@@ -2,7 +2,7 @@ import React from "react";
 
 const Literature = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-screen">
+    <div className="flex flex-col items-center justify-center w-full">
       <div
         name="l1"
         className="flex items-center justify-center w-full h-screen"

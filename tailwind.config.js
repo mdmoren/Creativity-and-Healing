@@ -2,6 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    colors: {
+      'darkbrowngray': '#625d50',
+      'darktealgreen': '#347d75',
+      'copper': '#c66218',
+      'lightmochabeige': '#cbb69c',
+      'lightpeach': '#fee7da',
+      'oldgold': '#e5ce97',
+      'offwhite': '#fcfcee',
+      'white': '#ffffff',
+      'black': '#000000',
+      'blackbrown': '#1e1108'
+    },
     minWidth: {
       420: "420px",
       320: "320px",

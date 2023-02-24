@@ -32,34 +32,34 @@ const NavBar = () => {
   }
 
   return (
-    <div className="fixed flex w-screen h-14 bg-zinc-600">
+    <div className="fixed flex w-screen h-14 bg-darkbrowngray shadow-bottom z-40">
       <ul className="items-center justify-center hidden w-full h-full smd:flex">
 
-        <Link to="/" className="hidden md:flex mx-4 text-[#fff] font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
-        <Link to="/" className="flex md:hidden mx-4 text-[#fff] font-sans font-bold text-md cursor-pointer">CH</Link>
+        <Link to="/" className="hidden md:flex mx-4 text-offwhite font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
+        <Link to="/" className="flex md:hidden mx-4 text-offwhite font-sans font-bold text-md cursor-pointer">CH</Link>
 
         {NavLinks.map(({ id, url, title, sublinks }) => (
           <li key={id} className="relative mx-4">
             <div className="flex items-center cursor-pointer">
               <Link
                 to={url}
-                className="text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans link-underline"
+                className="text-sm font-semibold text-offwhite hover:text-[#fff] font-sans link-underline"
               >
                 {title}
               </Link>
               {sublinks.length > 0 && (
                 <IoMdArrowDropdown
                   onClick={() => handleDropdownClick(id)}
-                  className="ml-2 text-[#bbb] hover:text-[#fff]"
+                  className="ml-2 text-offwhite hover:text-[#fff]"
                 />
               )}
             </div>
             {sublinks.length > 0 && openDropdownId === id && (
-              <div className="absolute z-10 px-4 py-2 rounded-md bg-zinc-600 top-full">
+              <div className="absolute z-50 px-4 py-2 rounded-md bg-darkbrowngray top-full">
                 {sublinks.map(({link, title }, index) => (
                   <div
                     key={index}
-                    className="block text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans my-2"
+                    className="block text-sm font-semibold text-offwhite hover:text-[#fff] font-sans my-2 hover:scale-105 cursor-pointer"
                     onClick={() => {
                       handleDropdownClick(id);
                       handleSubLink(url, link);
@@ -78,16 +78,16 @@ const NavBar = () => {
         
         className="flex items-center justify-between w-full smd:hidden "
       >
-        <Link to="/" className="mx-10 text-[#fff] font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
+        <Link to="/" className="mx-10 text-offwhite font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
         <div onClick={() => setNav(!nav)}>
         {nav ? (
           <FaTimes
-            className="m-10 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#e74c3c]"
+            className="m-10 cursor-pointer hover:scale-110 duration-200 text-offwhite hover:text-[#e74c3c]"
             size={20}
           />
         ) : (
           <FaBars
-            className="m-10 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#fff]"
+            className="m-10 cursor-pointer hover:scale-110 duration-200 text-offwhite hover:text-[#fff]"
             size={20}
           />
         )}
@@ -97,7 +97,7 @@ const NavBar = () => {
       <div
         className={`${
           nav ? "w-full" : "hidden w-0"
-        }  flex absolute top-14 smd:hidden transition-all duration-300 bg-zinc-600`}
+        }  flex absolute top-14 smd:hidden transition-all duration-300 bg-darkbrowngray`}
       >
         <ul className="flex flex-col items-start justify-center w-full p-5 ">
           {NavLinks.map(({ id, url, title, sublinks }) => (
@@ -105,7 +105,7 @@ const NavBar = () => {
               <Link
                 onClick={() => setNav(!nav)}
                 to={url}
-                className="text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans"
+                className="text-sm font-semibold text-offwhite hover:text-[#fff] font-sans"
               >
                 {title}
               </Link>
@@ -119,7 +119,7 @@ const NavBar = () => {
                           setNav(!nav);
                           handleSubLink(url, link);
                         }}
-                        className="my-2 text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans"
+                        className="my-2 text-sm font-semibold text-offwhite hover:text-[#fff] font-sans cursor-pointer"
                       >
                         {title}
                       </div>

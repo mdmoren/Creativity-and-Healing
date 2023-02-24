@@ -12,7 +12,7 @@ import Literature from './pages/Literature';
 function App() {
   return (
     <Router>
-      <div>
+      <div className='bg-offwhite'>
         <NavBar/>
         
 
