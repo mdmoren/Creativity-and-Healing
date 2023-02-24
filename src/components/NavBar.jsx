@@ -105,8 +105,8 @@ const NavBar = () => {
 
               {sublinks.length > 0 && (
                 <ul className="flex-col hidden m-2 group-hover:flex">
-                  {sublinks.map(({ title, link, id }) => (
-                    <li key={id}>
+                  {sublinks.map(({ title, link}, index) => (
+                    <li key={index}>
                       <div
                         onClick={() => {
                           setNav(!nav);
