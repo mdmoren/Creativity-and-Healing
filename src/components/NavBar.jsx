@@ -34,6 +34,10 @@ const NavBar = () => {
   return (
     <div className="fixed flex w-screen h-14 bg-zinc-600">
       <ul className="items-center justify-center hidden w-full h-full smd:flex">
+
+        <Link to="/" className="hidden md:flex mx-4 text-[#fff] font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
+        <Link to="/" className="flex md:hidden mx-4 text-[#fff] font-sans font-bold text-md cursor-pointer">CH</Link>
+
         {NavLinks.map(({ id, url, title, sublinks }) => (
           <li key={id} className="relative mx-4">
             <div className="flex items-center cursor-pointer">
@@ -71,20 +75,23 @@ const NavBar = () => {
       </ul>
 
       <div
-        onClick={() => setNav(!nav)}
-        className="flex items-center justify-start w-full smd:hidden "
+        
+        className="flex items-center justify-between w-full smd:hidden "
       >
+        <Link to="/" className="mx-10 text-[#fff] font-sans font-bold text-md cursor-pointer">Creativity and Healing</Link>
+        <div onClick={() => setNav(!nav)}>
         {nav ? (
           <FaTimes
-            className="m-5 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#e74c3c]"
+            className="m-10 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#e74c3c]"
             size={20}
           />
         ) : (
           <FaBars
-            className="m-5 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#fff]"
+            className="m-10 cursor-pointer hover:scale-110 duration-200 text-[#bbb] hover:text-[#fff]"
             size={20}
           />
         )}
+        </div>
       </div>
 
       <div
