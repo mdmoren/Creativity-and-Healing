@@ -52,9 +52,9 @@ const NavBar = () => {
             </div>
             {sublinks.length > 0 && openDropdownId === id && (
               <div className="absolute z-10 px-4 py-2 rounded-md bg-zinc-600 top-full">
-                {sublinks.map(({ id, link, title }) => (
+                {sublinks.map(({link, title }, index) => (
                   <div
-                    key={id}
+                    key={index}
                     className="block text-sm font-semibold text-[#bbb] hover:text-[#fff] font-sans my-2"
                     onClick={() => {
                       handleDropdownClick(id);
